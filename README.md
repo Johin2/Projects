@@ -31,4 +31,26 @@ The main() function connects to a MySQL server, calls upload_documents() to proc
 Overall, this code enables the user to upload images, extract text from them, and store the text and metadata in a MySQL database.The Program defines several functions to upload images, perform OCR (Optical Character Recognition) on them, and insert them into a MySQL database. The upload_file() function reads an image file using OpenCV, resizes it, displays it, performs OCR on it using the Tesseract library, and prints the recognized text to the console. The insert_to_database() function inserts an image file and its metadata into a MySQL database. The upload_documents() function prompts the user to enter the document type and file paths for each image, calls the upload_file() function to process the images and collect their text, and stores the results in a dictionary. The main() function connects to a MySQL server, calls upload_documents() to process the images and store them in the database, and prints a success or cancellation message to the console. Overall, this code enables the user to upload images, extract text from them, and store the text and metadata in a MySQL database.
 **Skills: Python (Programming Language) · GitHub · MySQL**
 
+**5)** **Sentiment Analysis**:-
+__Data Acquisition and Preparation__:
 
+You obtained Twitter datasets for training and validation purposes, which contained columns such as 'id', 'company', 'sentiment', and 'review'.
+Data preprocessing involved:
+Cleaning text data by removing punctuation and converting text to lowercase.
+Tokenizing the text to separate words.
+Removing English stop words to enhance the quality of text for analysis.
+Filtering out irrelevant sentiments from the dataset for model training and testing.
+__Text Vectorization__:
+
+Utilized TF-IDF (Term Frequency-Inverse Document Frequency) vectorization to convert textual data into numerical form, which the machine learning model can interpret.
+__Model Building and Evaluation__:
+
+Employed a Support Vector Machine (SVM) with a linear kernel for classification.
+Split the data into training and testing sets.
+Trained the model using the training data transformed through TF-IDF vectorization.
+Evaluated model performance using accuracy metrics and generated a classification report encompassing precision, recall, and F1-score for each sentiment class (Negative, Neutral, Positive).
+Achieved an accuracy of approximately 96.01% on the validation dataset, demonstrating the model's effectiveness in sentiment classification.
+__Prediction on New Data__:
+
+Applied the trained model to predict sentiments on new, unseen data (a list of phrases), providing a breakdown of sentiments for each phrase.
+**Skills :- Machine Learning**
